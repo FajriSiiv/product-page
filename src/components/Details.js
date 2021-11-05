@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FiPlus, FiMinus, FiShoppingCart } from "react-icons/fi";
 
@@ -61,7 +61,7 @@ const PriceAfter = styled.span`
 `;
 
 const ButtonGroup = styled.div`
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
 `;
 const Counting = styled.div`
@@ -111,7 +111,56 @@ const Result = styled.div`
   background: transparent;
 `;
 
+const ColorList = styled.div`
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+`;
+
+const SelectColor = styled.span`
+  font-size: 16px;
+`;
+
+const LayerColor = styled.div`
+  margin-left: 20px;
+  display: flex;
+`;
+
+const ColorP = styled.div`
+  height: 10px;
+  width: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  background: black;
+  margin: 0 7px;
+  background: ${props => props.colorlist};
+  border: 3px solid transparent;
+  &:focus-within {
+    border: 3px solid blueviolet;
+  }
+`;
+
 export default function Details() {
+  const [result, setResult] = useState(0);
+
+  function handlePlus() {
+    let hasil = result;
+    hasil = result + 1;
+
+    setResult(hasil);
+  }
+
+  const handleMinus = () => {
+    if (result < 1) {
+      setResult(0);
+    } else {
+      let hasil = result;
+      hasil = result - 1;
+
+      setResult(hasil);
+    }
+  };
+
   return (
     <Container>
       <CompanyName>Product Company | Nike</CompanyName>
@@ -126,13 +175,22 @@ export default function Details() {
         <Discount>50%</Discount>
         <PriceAfter>Rp1.100.00,00</PriceAfter>
       </PriceTag>
+      <ColorList>
+        <SelectColor>Select Color :</SelectColor>
+        <LayerColor>
+          <ColorP tabIndex="1" colorlist="#008CFF"></ColorP>
+          <ColorP tabIndex="1" colorlist="#303231"></ColorP>
+          <ColorP tabIndex="1" colorlist="#BD011A"></ColorP>
+          <ColorP tabIndex="1" colorlist="#4A512F"></ColorP>
+        </LayerColor>
+      </ColorList>
       <ButtonGroup>
         <Counting>
-          <More>
+          <More onClick={handleMinus}>
             <FiMinus />
           </More>
-          <Result>0</Result>
-          <More>
+          <Result>{result}</Result>
+          <More onClick={handlePlus}>
             <FiPlus />
           </More>
         </Counting>

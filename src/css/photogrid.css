@@ -18,13 +18,21 @@
   height: 100%;
 }
 
-.carousel {
-  max-width: 87%;
+.carousel-slider {
   display: flex;
   justify-content: center;
   align-content: center;
+  max-width: 87%;
 }
 
 .carousel.carousel-slider {
+  margin: auto;
+}
+
+.carousel .thumbs {
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
 }
