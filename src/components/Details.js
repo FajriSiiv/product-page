@@ -218,6 +218,14 @@ export default function Details() {
     }
   };
 
+  const handleResult = () => {
+    if (result <= 0) {
+      alert("Anda belum memesan");
+    } else {
+      alert(`Terimakasih sudah memsan ${result} buah barang`);
+    }
+  };
+
   return (
     <Container>
       <CompanyName>Product Company | Nike</CompanyName>
@@ -251,7 +259,7 @@ export default function Details() {
             <FiPlus />
           </More>
         </Counting>
-        <Button>
+        <Button onClick={handleResult}>
           <FiShoppingCart /> Add to Cart
         </Button>
       </ButtonGroup>
