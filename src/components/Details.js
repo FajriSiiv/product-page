@@ -7,6 +7,12 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 0 70px;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding: 0 20px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+  }
 `;
 
 const CompanyName = styled.h5`
@@ -14,18 +20,30 @@ const CompanyName = styled.h5`
   color: #ffb703;
   letter-spacing: 2px;
   text-transform: uppercase;
+  @media screen and (max-width: 500px) {
+    font-size: 13px;
+  }
 `;
 
 const NameProduct = styled.h2`
   font-size: 35px;
   line-height: 50px;
   margin-top: 15px;
+  @media screen and (max-width: 500px) {
+    font-size: 23px;
+    line-height: initial;
+    margin-top: 8px;
+  }
 `;
 
 const Description = styled.p`
   font-size: 14px;
   color: #6c757d;
   margin-top: 20px;
+  @media screen and (max-width: 500px) {
+    font-size: 10px;
+    margin-top: 10px;
+  }
 `;
 
 const PriceTag = styled.div`
@@ -40,6 +58,9 @@ const Price = styled.span`
   font-size: 20px;
   font-weight: bold;
   margin-right: 10px;
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 const Discount = styled.span`
@@ -49,6 +70,10 @@ const Discount = styled.span`
   letter-spacing: 0.5px;
   background: #ffd67057;
   color: #ff9770;
+  @media screen and (max-width: 500px) {
+    padding: 3px 8px;
+    font-size: 12px;
+  }
 `;
 
 const PriceAfter = styled.span`
@@ -58,17 +83,29 @@ const PriceAfter = styled.span`
   text-decoration: line-through;
   color: #6c757d;
   font-size: 17px;
+  @media screen and (max-width: 500px) {
+    font-size: 13px;
+  }
 `;
 
 const ButtonGroup = styled.div`
   margin-top: 20px;
   display: flex;
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-evenly;
+  }
 `;
 const Counting = styled.div`
   display: flex;
   align-items: center;
   background: #edf2fb;
   border-radius: 5px;
+  @media screen and (max-width: 500px) {
+    margin-bottom: 5px;
+    justify-content: space-between;
+  }
 `;
 const Button = styled.button`
   margin-left: 20px;
@@ -88,6 +125,12 @@ const Button = styled.button`
     font-size: 18px;
     transition: 0s all;
   }
+  @media screen and (max-width: 500px) {
+    padding: 7px 20px;
+    margin-top: 5px;
+    margin-left: 0px;
+    justify-content: center;
+  }
 `;
 
 const More = styled.button`
@@ -104,11 +147,17 @@ const More = styled.button`
     font-size: 20px;
     color: #ff9770;
   }
+  @media screen and (max-width: 500px) {
+    padding: 7px 20px;
+  }
 `;
 const Result = styled.div`
   width: 100px;
   text-align: center;
   background: transparent;
+  @media screen and (max-width: 500px) {
+    width: 35px;
+  }
 `;
 
 const ColorList = styled.div`
@@ -119,6 +168,9 @@ const ColorList = styled.div`
 
 const SelectColor = styled.span`
   font-size: 16px;
+  @media screen and (max-width: 500px) {
+    font-size: 13px;
+  }
 `;
 
 const LayerColor = styled.div`
@@ -137,6 +189,11 @@ const ColorP = styled.div`
   border: 3px solid transparent;
   &:focus-within {
     border: 3px solid blueviolet;
+  }
+  @media screen and (max-width: 500px) {
+    height: 5px;
+    width: 5px;
+    padding: 7px;
   }
 `;
 

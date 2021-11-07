@@ -9,7 +9,11 @@ import ShoesRed from "../img/img4.jpg";
 import styled from "styled-components";
 import "../css/photogrid.css";
 
-const Container = styled.div``;
+const Container = styled.div`
+  @media screen and (max-width: 500px) {
+    height: fit-content;
+  }
+`;
 
 const ImageCon = styled.div``;
 

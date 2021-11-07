@@ -36,3 +36,15 @@
   justify-content: center;
   margin: auto;
 }
+
+@media screen and (max-width: 500px) {
+  .carousel .thumb {
+    display: none;
+  }
+  .carousel-slider {
+    max-width: 100%;
+  }
+  .carousel .thumbs-wrapper {
+    display: none;
+  }
+}

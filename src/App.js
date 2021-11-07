@@ -14,6 +14,10 @@ const Container = styled.div`
       cursor: pointer;
     }
   }
+  @media screen and (max-width: 500px) {
+    max-width: 100vw;
+    width: 100vw;
+  }
 `;
 
 function App() {

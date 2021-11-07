@@ -12,6 +12,13 @@ const Container = styled.div`
   justify-content: center;
   position: relative;
   overflow-x: hidden;
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    height: fit-content;
+    padding: 0;
+    position: relative;
+    max-height: none;
+  }
 `;
 const Layer = styled.div`
   flex: 1;
@@ -21,6 +28,10 @@ const Layer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
+  @media screen and (max-width: 500px) {
+    height: fit-content;
+    padding: 0;
+  }
 `;
 export default function Mainpage() {
   return (
